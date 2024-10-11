@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="./assests/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .bg-gradient {
+            background: linear-gradient(75deg, #3C0753, #720455);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-sm w-full"> <!-- Ajustado para max-w-sm -->
+        <div class="text-center mb-8">
+            <img class="mx-auto h-10 w-auto" src="./assests/image/axion_tecnologia.svg" alt="AXION">
+        </div>
+      
+        <form class="space-y-6" action="#" method="POST">
+          <div class="relative">
+            <i class="fas fa-user absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
+            <input id="name" name="name" type="text" autocomplete="username" placeholder="Nome de Usuário" required class="pl-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:border-[#3C0753] sm:text-sm">
+        </div>
+
+        <div class="relative">
+            <i class="fas fa-lock absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Senha" required class="pl-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:border-[#3C0753] sm:text-sm">
+        </div>
+
+      
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-600 border-gray-300 rounded">
+                    <label for="remember-me" class="ml-2 block text-sm text-gray-900">Permanecer conectado</label>
+                </div>
+                <div>
+                    <a href="./Recuperacao.html" class="text-sm text-[#3C0753] hover:text-[#3C0753]">Esqueceu a senha?</a>
+                </div>
+            </div>
+      
+            <div>
+                <button type="submit" class="w-full flex justify-center rounded-md py-2 px-4 text-sm font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:ring-offset-2 bg-gradient">
+                    Entrar
+                </button>
+            </div>
+        </form>
+        <div class="mt-10 text-center">
+          <p class="mt-10 text-center text-sm text-gray-500">
+            Não tem uma conta? <a href="Cadastro.html" class="font-semibold text-purple-700 hover:text-purple-600">Crie uma Conta</a>
+        </p>        
+        </div>
+    </div>
+</body>
+</html>
