@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="./assests/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'sans-serif' 'Helvetica';
         }
 
         .login-container {
@@ -18,7 +20,7 @@
         }
 
         .login-form {
-            width: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -26,7 +28,7 @@
         }
 
         .login-image {
-            width: 50%; 
+            width: 100%;
             background: linear-gradient(90deg, rgba(35, 3, 49, 0.9), rgba(114, 4, 85, 0.9)), url('./assests/image/quem_somos_bg.jpg') no-repeat center center fixed;
             background-size: cover;
             position: relative;
@@ -43,9 +45,10 @@
         }
 
         .login-form h1 {
-            font-size: 1.5rem;
-            font-weight:bold;
+            font-size: 1.3rem;
+            font-weight: bold;
             margin-bottom: 30px;
+
         }
 
         .login-form .form-control {
@@ -53,7 +56,7 @@
         }
 
         .login-form button {
-            background: linear-gradient(90deg, rgba(35, 3, 49, 0.9), rgba(114, 4, 85, 0.9));
+            background: linear-gradient(90deg, #230331e6, rgba(114, 4, 85, 0.9));
             color: #fff;
             padding: 10px;
             border-radius: 5px;
@@ -69,26 +72,41 @@
         }
 
         .login-image-content h1 {
-            font-size: 1.75rem;
-        
+            font-size: 1.4rem;
+            font-weight: 700;
+
         }
+
+        @media (max-width: 800px) {
+            .login-image {
+                display: none;
+            }
+        }
+
+    
     </style>
 </head>
 
 <body>
-   
+
     <div class="login-container">
-        
-        <div class="login-form">
+        <div class=" login-form">
             <form>
                 <div class="text-center mb-8">
-                    <img class="mx-auto h-10 w-auto" src="./assests/image/axion_tecnologia.svg" alt="AXION">
+                    <img class="mx-auto h-10 w-auto " src="./assests/image/axion_tecnologia.svg" alt="AXION">
                 </div>
-                        
+                <div class="form-control">
+                    <div class="text-gray-950 font-semibold "
+                        style="font-size: 1.075rem; font: weight 500px; display: flex; justify-content: space-around;">
+                        Informe seus dados para entrar
+                    </div>
+                </div>
+
                 <div class="form-control">
                     <div class="relative">
                         <i class="fas fa-user absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
-                        <input id="name" name="name" type="text" autocomplete="username" placeholder="Nome de Usuário" required
+                        <input id="name" name="name" type="text" autocomplete="username" placeholder="Nome de Usuário"
+                            required
                             class="pl-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:border-[#3C0753] sm:text-sm">
                     </div>
                 </div>
@@ -101,21 +119,23 @@
                                 class="pl-10 pr-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:border-[#3C0753] sm:text-sm">
                         </div>
                         <div class="" style="display: flex;justify-content: flex-end; margin: 0px 10px ;">
-                            <i class="fas fa-lock absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
+                            <i
+                                class="fas fa-lock absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
                             <i id="togglePassword"
                                 class="fas fa-eye absolute top-1/2 transform -translate-y-1/2 right-3 cursor-pointer text-[#3C0753] ml-1"></i>
                         </div>
-                        </div>
+                    </div>
                 </div>
-               
+
 
 
                 <div class="form-control">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
                             <input id="remember-me" name="remember-me" type="checkbox"
-                                class="h-4 w-4 text-purple-600 focus:ring-purple-600 border-gray-300 rounded">
-                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">Permanecer conectado</label>
+                                class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">Permanecer
+                                Conectado</label>
                         </div>
                         <div>
                             <a href="./Recuperacao.html" class="text-sm text-[#3C0753] hover:text-[#3C0753]">Esqueceu a
@@ -124,25 +144,22 @@
                     </div>
                 </div>
 
-               
-        <div>
-            <button type="submit"
-                class="w-full">
-                Entrar
-            </button>
-        </div>
+
+                <div>
+                    <button type="submit" class="w-full">
+                        Entrar
+                    </button>
+                </div>
             </form>
-        
-
-
         </div>
 
         <div class="login-image">
             <div class="login-image-content">
-                <h1>Reconhecimento Inteligente e Personalizado de Veículos</br> e Placas com Alta Precisão e Eficiência.</h1>
+                <h1>Reconhecimento Inteligente e Personalizado de Veículos </br> e  Placas com Alta Precisão e
+                    Eficiência.
+                </h1>
             </div>
         </div>
-    
     </div>
 </body>
 

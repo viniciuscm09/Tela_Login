@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperação de Senha</title>
+    <img src="" alt="">
     <link href="./assests/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'sans-serif' 'Helvetica';
         }
 
         .login-container {
@@ -18,7 +19,7 @@
         }
 
         .login-form {
-            width: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -26,7 +27,7 @@
         }
 
         .login-image {
-            width: 50%; 
+            width: 100%; 
             background: linear-gradient(90deg, rgba(35, 3, 49, 0.9), rgba(114, 4, 85, 0.9)), url('./assests/image/quem_somos_bg.jpg') no-repeat center center fixed;
             background-size: cover;
             position: relative;
@@ -46,6 +47,7 @@
             font-size: 1.5rem;
             font-weight:bold;
             margin-bottom: 30px;
+            
         }
 
         .login-form .form-control {
@@ -70,14 +72,22 @@
         }
 
         .login-image-content h1 {
-            font-size: 1.75rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        
         }
+        @media (max-width: 800px) {
+            .login-image {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-form">
+    <div class="row login-container">
+        <div class="col-6 login-form">
 
             <form class="space-y-6" action="#" method="POST">
                 <h2 class="text-center text-2xl font-bold mb-6 text-gray-800">Recuperação de Senha</h2>
@@ -91,7 +101,7 @@
                 <div class="form-control">
                     <div class="relative">
                         <i class="fas fa-envelope absolute top-1/2 transform -translate-y-1/2 left-3 text-[#3C0753]"></i>
-                        <input id="email" name="email" type="email" placeholder="Seu email" required class="pl-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600 sm:text-sm">
+                        <input id="email" name="email" type="email" placeholder="Seu email" required class="pl-10 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3C0753] focus:border-[#3C0753] sm:text-sm">
                     </div>
                 </div>
 
@@ -113,7 +123,7 @@
             </form>
         </div>
 
-        <div class="login-image">
+        <div class="col-6 login-image ">
             <div class="login-image-content">
                 <h1>Reconhecimento Inteligente e Personalizado de Veículos<br> e Placas com Alta Precisão e Eficiência.</h1>
             </div>

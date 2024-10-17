@@ -1,18 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './build/*.html'
+  purge: [
+    './build/*.html',
+    "../node_modules/flowbite/dist/flowbite.min.js"
   ],
+  darkMode: false,
   theme: {
-    extend: {
-
-      colors:{
-        'custom-blue': '#2bc1f9',
-
-
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  variants: {
+    extend: {},
+  },
+  plugins: [
+
+    require('flowbite/plugin')
+  ],
+  
 }
 
